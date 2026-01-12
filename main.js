@@ -11,7 +11,7 @@ const coleccion_docentes=[
         apellidos:"Juarez Castillo",
         puesto:"Profesor investigador",
         edad:55,
-        estado:false
+        estado:true
     },
     {
         nombre:"Hermes",
@@ -25,6 +25,9 @@ const coleccion_docentes=[
 const mostrar=()=>{
     //rescatamos el div que va a contener la informacion 
     const contenedor = document.getElementById("contenedor")
+
+    //limpiamos el contenedor para que no se repitan los elementos 
+    contenedor.innerHTML=""
 
     coleccion_docentes.forEach((docente)=>{
         if(docente.estado==true){
